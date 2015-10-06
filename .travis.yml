@@ -23,4 +23,4 @@ install:
  - pip install -r qabel-accounting/requirements.txt
 
 script:
- - travis_wait ./gradlew check
+ - ./gradlew check
