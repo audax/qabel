@@ -3,6 +3,9 @@ language: java
 jdk:
  - oraclejdk7
 
+python:
+ - "3.4"
+
 notifications:
   email: false
 
