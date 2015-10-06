@@ -3,15 +3,12 @@ language: java
 jdk:
  - oraclejdk7
 
-python:
- - "3.4"
-
 notifications:
   email: false
 
 install:
  - redis-server > /dev/null 2>&1 &
- - sudo apt-get install python-pip npm nodejs
+ - sudo apt-get install python-pip npm nodejs python3.4
  - sudo pip install virtualenv
  - virtualenv qabel-drop
  - source qabel-drop/bin/activate
