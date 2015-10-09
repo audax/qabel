@@ -7,11 +7,6 @@ python:
 
 cache: pip
 
-language: python
-
-python:
- - "3.4"
-
 notifications:
   email: false
 
@@ -20,8 +15,6 @@ services:
 
 install:
  - pip install -r qabel-drop/requirements.txt
- - virtualenv --python=python3.4 qabel-accounting
- - source qabel-accounting/bin/activate
  - pip install -r qabel-accounting/requirements.txt
 
 script:
