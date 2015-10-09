@@ -171,16 +171,8 @@ startServers << {
 	}
 }
 
-task testAccounting(type: Exec) {
-      environment 'DJANGO_SETTINGS_MODULE', 'qabel_id.settings'
-      workingDir 'qabel-accounting'
-      commandLine 'py.test', '--splinter-webdriver', 'phantomjs',
-      		  'functional_tests', 'qabel_id', 'qabel_provider'
-}
-
 subprojects {
 	apply plugin: 'java'
-	test.dependsOn(parent.testAccounting)
 	test.dependsOn(parent.startServers)
 	test.finalizedBy(parent.killAllTestProcesses1)
 }
